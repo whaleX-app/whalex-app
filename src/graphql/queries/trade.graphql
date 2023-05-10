@@ -1,0 +1,21 @@
+query trade($id: String!) {
+  trade(id: $id) {
+    id
+    addressProvider
+    addressUser
+    amountFrom
+    amountTo
+    createdAt
+    expiresAt
+    networkFrom
+    networkTo
+    tickerFrom
+    tickerTo
+    provider
+    providerSupportPlatform
+    providerSupportUrl
+    providerTradeId
+    providerTradeUrl
+    status
+  }
+}

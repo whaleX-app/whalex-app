@@ -1,0 +1,90 @@
+{
+    "tradeMethod": {
+        "standard": "Standard", 
+        "payment": "Płatność"
+    },
+    "noOffersFound": "Nie znaleziono żadnych ofert.",
+    "findOffers": "Znajdź oferty",
+    "youSend": "Wysyłasz",
+    "youReceive": "Otrzymujesz",
+    "receiveAddress": "Adres do odbioru",
+    "refundAddressToggle": "Twój adres do zwrotu (opcjonalnie)",
+    "refundAddress": "Adres do zwrotu",
+    "minimumAmount": "Minimalna kwota",
+    "maximumAmount": "Maksymalna kwota",
+    "unknown": "Nieznany",
+    "rateType": {
+        "floating": "Kurs zmienny",
+        "fixed": "Kurs stały"
+    },
+    "kycHelp": {
+        "a": "Nigdy nie pyta użytkownika o weryfikacje.",
+        "b": "Rzadko pyta o weryfikacje. Zwraca fundusze jeżeli odmówiono.",
+        "c": "Rzadko pyta o weryfikacje. Zwraca fundusze jeżeli odmówniono, chyba że zapobiega temu prawo.",
+        "d": "Rzadko pyta o weryfikacje. W razie odmowy może wstrzymać fundusze na czas nieokreślony bez usprawiedliwienia prawnego.",
+        "insurance": "Wymiany wykonane przez naszą aplikację są chronione gwarancją Trocador. Więcej informacji na ten temat znajdziesz tutaj"
+    },
+    "historyHelp": "Przesuń w lewo aby usunąć transakcję. Transakcje usunięte z twojego urządzenia są również usunięte z Trocador.",
+    "provider": "Dostawca",
+    "rate": "Kurs",
+    "spread": "Różnica",
+    "editTransaction": "Edytuj transakcję",
+    "exchange": "Wymień",
+    "trade": "Handel",
+    "newTrade": "Nowa wymiana",
+    "deleteTrade": "Usuń transakcję",
+    "history": "Historia",
+    "details": "Szczegóły",
+    "created": "Utworzono",
+    "sendExactly": "Wyślij dokłanie",
+    "toAddress": "na ten adres",
+    "receiveAddressCoin": "Otrzymasz swoje {{coinName}} na ten adres",
+    "createdFromNow": "Utworzono {{fromNow}}",
+    "expiresFromNow": "Traci ważność {{fromNow}}",
+    "tradeDeleted": "Transakcja usunięta.",
+    "tradeExpires": "Transakcja wygasa",
+    "clipboardAddress": "Skopiowano adres do schowka.",
+    "findUsAt": "Jesteśmy tutaj",
+    "partners": "Partnerzy",
+    "wallets": "Portfele",
+    "featured": "wyróżniony",
+    "receive": "otrzymaj",
+    "settings": "Ustawienia",
+    "language": "Język",
+    "status": "Status",
+    "statusType": {
+        "waiting": "Oczekiwanie",
+        "confirming": "Potwierdzanie",
+        "sending": "Wysyłanie",
+        "completed": "Ukończono",
+        "expired": "Wygasł"
+    },
+    "statusDescription": {
+        "waiting": "Depozyt nie potwierdzony jeszcze na blockchanie. ",
+        "confirming": "Wykryto depozyt. Poczekaj na potwierdzenie.",
+        "sending": "Środki są wysyłane.",
+        "completed": "Transakcja zakończona."
+    },
+    "validation": {
+        "amountFromRequired": "Wpisz kwotę którą chcesz wysłać",
+        "amountFromMin": "Minimalna kwota wysyłki to {{minAmount}} {{ticker}}.",
+        "amountFromMax": "Maksymalna kwota wysyłki to {{maxAmount}} {{ticker}}.",
+        "amountToRequired": "Wpisz kwotę którą chcesz otrzymać",
+        "amountToMin": "Minimalna kwota do odbioru to {{minAmount}} {{ticker}}.",
+        "amountToMax": "Maksymalna kwota do odbioru to {{maxAmount}} {{ticker}}",
+        "receiveAddressRequired": "Wprowadź adres do odbioru.",
+        "selectedOfferRequired": "Wybierz ofertę."
+    },
+    "error": {
+        "noOngoingTrade": "Nie masz trwających transakcji.",
+        "invalidReceiveAddress": "Niepoprawny adres do odbioru",
+        "invalidRefundAddress": "Niepoprawny adres do zwrotu.",
+        "provider": "Nie mogę utworzyć transakcji u wybranego dostawcy. Wybierz innego.",
+        "unableToConnect": "Brak połączenia z serwerem, spróbuj ponownie. Jeśli problem będzie nadal występował skontaktuj się z nami na Telegramie.",
+        "noInternetConnection": "Nie mogę połączyć się z serwerem. Sprawdź swoje połączenie z internetem.",
+        "unknown": "Coś poszło nie tak."
+    },
+    "notification": {
+        "tradeCompleted": "Transakcja (ID: {{id}}) ukończona."
+    }
+}

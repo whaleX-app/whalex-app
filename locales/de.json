@@ -1,0 +1,87 @@
+{
+    "tradeMethod": {
+        "standard": "Standard", 
+        "payment": "Bezahlung"
+    },
+    "noOffersFound": "Es wurden keine Angebote gefunden.",
+    "findOffers": "Angebote finden",
+    "youSend": "Du sendest",
+    "youReceive": "Du erhälst",
+    "receiveAddress": "Empfängeradresse",
+    "refundAddressToggle": "Deine Rückerstattungsadresse (optional)",
+    "refundAddress": "Rückerstattungsadresse",
+    "minimumAmount": "Mindestbetrag",
+    "maximumAmount": "Höchstbetrag",
+    "unknown": "Unbekannt",
+    "rateType": {
+        "floating": "Variierender Kurs",
+        "fixed": "Fester Kurs"
+    },
+    "kycHelp": {
+        "a": "Verlangt nie nach einer Verifizierung.",
+        "b": "Verlangt nur selten eine Verifizierung.",
+        "c": "Verlangt nur selten eine Verifizierung. Erstattet den Betrag zurück bei einer Ablehnung.",
+        "d": "Verlangt nur selten eine Verifizierung. Könnte im Falle einer Ablehnung die Rückerstattung verweigern.",
+        "insurance": "Transaktionen die über unsere App getätigt werden, genießen die Trocador-Garantie. Erfahre mehr"
+    },
+    "historyHelp": "Wische nach links zum Löschen. Tausche werden auch serverseitig von Trocador gelöscht.",
+    "provider": "Anbieter",
+    "rate": "Kurs",
+    "spread": "Verlust",
+    "editTransaction": "Transkation bearbeiten",
+    "exchange": "Tauschen",
+    "trade": "Tausch",
+    "newTrade": "Neuer Tausch",
+    "deleteTrade": "Tausch löschen",
+    "history": "Verlauf",
+    "details": "Details",
+    "created": "Erstellt",
+    "sendExactly": "Sende exakt",
+    "toAddress": "an diese Adresse",
+    "receiveAddressCoin": "Du erhälst deine {{coinName}} an diese Adresse",
+    "tradeDeleted": "Der Tausch wurde gelöscht",
+    "tradeExpires": "Tausch läuft ab",
+    "clipboardAddress": "Adresse wurde in die Zwischenablage kopiert.",
+    "howToUseApp": "Wie man die App benutzt",
+    "findUsAt": "Finde uns hier",
+    "partners": "Partner",
+    "wallets": "Wallets",
+    "featured": "featured",
+    "receive": "erhalte",
+    "status": "Status",
+    "settings": "Einstellungen",
+    "statusType": {
+        "waiting": "Warte",
+        "confirming": "Bestätigung läuft",
+        "sending": "Wird gesendet",
+        "completed": "Abgeschlossen",
+        "expired": "Abgelaufen"
+    },
+    "statusDescription": {
+        "waiting": "Es gibt noch keine Bestätigung auf der Blockchain.",
+        "confirming": "Transaktion erkannt. Warte auf Bestätigung.",
+        "sending": "Betrag wird gesendet.",
+        "completed": "Transaktion abgeschlossen",
+        "expired": "Tausch abgelaufen"
+    },
+    "validation": {
+        "amountFromRequired": "Bitte gib an, wie viel Du tauschen möchtest.",
+        "amountFromMin": "Der Mindestbetrag ist {{minAmount}} {{ticker}}.",
+        "amountToRequired": "Bitte gib an, wie viel Du erhalten möchtest.",
+        "amountToMin": "Der Mindestbetrag ist {{minAmount}} {{ticker}}.",
+        "receiveAddressRequired": "Bitte gib deine Empfängeradresse an.",
+        "selectedOfferRequired": "Bitte wähle ein Angebot aus."
+    },
+    "error": {
+        "noOngoingTrade": "Es gibt keinen aktiven Tausch.",
+        "invalidReceiveAddress": "Ungültige Empfängeradresse.",
+        "invalidRefundAddress": "Ungültige Rückerstattungsadresse.",
+        "provider": "Es konnte kein Tausch beim ausgewählten Anbieter erstellt werden. Versuche es bei einem anderen Anbieter.",
+        "unableToConnect": "Es konnte keine Verbindung zum Server hergestellt werden. Versuchen  es später erneut und kontaktieren uns auf Telegram, falls das Problem weiterhin besteht.",
+        "noInternetConnection": "Es konnte keine Verbindung zum Server hergestellt werden. Bitte überprüfe Deine Internetverbindung",
+        "unknown": "Etwas ist schiefgelaufen."
+    },
+    "notification": {
+        "tradeCompleted": "Tausch (ID: {{id}}) wurde abgeschlossen."
+    }
+}

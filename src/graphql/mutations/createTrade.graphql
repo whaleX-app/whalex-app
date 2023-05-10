@@ -1,0 +1,45 @@
+mutation createTrade(
+  $id: String!
+  $provider: String!
+  $refundAddress: String
+  $receiveAddress: String!
+  $tickerFrom: String!
+  $tickerTo: String!
+  $networkFrom: String!
+  $networkTo: String!
+  $amount: Float!
+  $mode: TradeMode!
+) {
+  createTrade(
+    input: {
+      id: $id
+      provider: $provider
+      receiveAddress: $receiveAddress
+      refundAddress: $refundAddress
+      tickerFrom: $tickerFrom
+      tickerTo: $tickerTo
+      networkFrom: $networkFrom
+      networkTo: $networkTo
+      amount: $amount
+      mode: $mode
+    }
+  ) {
+    id
+    addressProvider
+    addressUser
+    amountFrom
+    amountTo
+    createdAt
+    expiresAt
+    networkFrom
+    networkTo
+    tickerFrom
+    tickerTo
+    provider
+    providerSupportPlatform
+    providerSupportUrl
+    providerTradeId
+    providerTradeUrl
+    status
+  }
+}

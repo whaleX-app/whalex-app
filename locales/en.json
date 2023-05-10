@@ -1,0 +1,91 @@
+{
+    "tradeMethod": {
+        "standard": "Standard", 
+        "payment": "Payment"
+    },
+    "noOffersFound": "Could not find any offers.",
+    "findOffers": "Find offers",
+    "youSend": "You send",
+    "youReceive": "You receive",
+    "receiveAddress": "Receive address",
+    "refundAddressToggle": "Your refund address (optional)",
+    "refundAddress": "Refund address",
+    "minimumAmount": "Minimum ammount",
+    "maximumAmount": "Maximum amount",
+    "unknown": "Unknown",
+    "rateType": {
+        "floating": "Floating rate",
+        "fixed": "Fixed rate"
+    },
+    "kycHelp": {
+        "a": "Never asks for user verification.",
+        "b": "Rarely asks for verification. Refunds if refused.",
+        "c": "Rarely asks for verification. Refunds if refused, unless a legal order prevents it.",
+        "d": "Rarely asks for verification. In case of refusal may block funds indefinitely without a legal order.",
+        "insurance": "Transactions made through our app enjoy Trocador Guarantee. Read more about it here"
+    },
+    "historyHelp": "Swipe left to delete trades. Trades you delete from your device are also deleted from Trocador.",
+    "provider": "Provider",
+    "rate": "Rate",
+    "spread": "Spread",
+    "editTransaction": "Edit transaction",
+    "exchange": "Exchange",
+    "trade": "Trade",
+    "newTrade": "New trade",
+    "deleteTrade": "Delete trade",
+    "history": "History",
+    "details": "Details",
+    "created": "Created",
+    "sendExactly": "Send exactly",
+    "toAddress": "to this address",
+    "receiveAddressCoin": "You'll receive your {{coinName}} to this address",
+    "createdFromNow": "Created {{fromNow}}",
+    "expiresFromNow": "Expires {{fromNow}}",
+    "tradeDeleted": "Trade has been deleted.",
+    "tradeExpires": "Trade expires",
+    "clipboardAddress": "Copied address to clipboard.",
+    "findUsAt": "Find us at",
+    "partners": "Partners",
+    "wallets": "Wallets",
+    "featured": "featured",
+    "receive": "receive",
+    "settings": "Settings",
+    "language": "Language",
+    "status": "Status",
+    "statusType": {
+        "waiting": "Waiting",
+        "confirming": "Confirming",
+        "sending": "Sending",
+        "completed": "Completed",
+        "expired": "Expired"
+    },
+    "statusDescription": {
+        "waiting": "No deposit confirmation yet on the blockchain.",
+        "confirming": "Deposit detected. Waiting for confirmation.",
+        "sending": "Funds are being sent.",
+        "completed": "Trade completed.",
+        "expired": "Trade expired"
+    },
+    "validation": {
+        "amountFromRequired": "Please enter a send amount.",
+        "amountFromMin": "The minimum send amount is {{minAmount}} {{ticker}}.",
+        "amountFromMax": "The maximum send amount is {{maxAmount}} {{ticker}}.",
+        "amountToRequired": "Please enter a receive amount.",
+        "amountToMin": "The minimum receive amount is {{minAmount}} {{ticker}}.",
+        "amountToMax": "The maximum receive amount is {{maxAmount}} {{ticker}}.",
+        "receiveAddressRequired": "Please enter a receive address.",
+        "selectedOfferRequired": "Please choose an offer."
+    },
+    "error": {
+        "noOngoingTrade": "There is no ongoing trade.",
+        "invalidReceiveAddress": "Invalid receive address",
+        "invalidRefundAddress": "Invalid refund address",
+        "provider": "Could not create trade at the selected provider. Try a different one.",
+        "unableToConnect": "Could not connect to the server, try again. If the problem persists, contact us on Telegram.",
+        "noInternetConnection": "Could not connect to the server. Please check your internet connection.",
+        "unknown": "Something went wrong."
+    },
+    "notification": {
+        "tradeCompleted": "Trade (ID: {{id}}) has been completed."
+    }
+}

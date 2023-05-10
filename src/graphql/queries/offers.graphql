@@ -1,0 +1,28 @@
+query offers(
+  $tickerFrom: String!
+  $tickerTo: String!
+  $networkFrom: String!
+  $networkTo: String!
+  $amount: Float!
+  $tradeMode: TradeMode!
+) {
+  offers(
+    tickerFrom: $tickerFrom
+    tickerTo: $tickerTo
+    networkFrom: $networkFrom
+    networkTo: $networkTo
+    amount: $amount
+    tradeMode: $tradeMode
+  ) {
+    createTradeId
+    tradeMode
+    offers {
+      provider
+      amount
+      waste
+      kycRating
+      insurance
+      rateType
+    }
+  }
+}
