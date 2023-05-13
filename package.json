@@ -5,6 +5,7 @@
     "dev": "expo start",
     "test": "jest",
     "codegen": "graphql-codegen",
+    "prebuild": "expo prebuild",
     "android": "expo run:android",
     "ios": "expo run:ios",
     "start": "expo start --dev-client"
