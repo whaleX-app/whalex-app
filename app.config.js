@@ -4,7 +4,7 @@ import { version } from './package.json';
 export default {
   expo: {
     name: 'whaleX',
-    slug: 'exchange-app',
+    slug: 'whaleX',
     version,
     orientation: 'portrait',
     icon: './assets/images/app-icon.png',
@@ -16,7 +16,7 @@ export default {
       backgroundColor: '#000000',
     },
     android: {
-      package: 'app.whalex',
+      package: 'app.whalex.mobile',
       userInterfaceStyle: 'dark',
       adaptiveIcon: {
         foregroundImage: './assets/images/app-icon.png',
