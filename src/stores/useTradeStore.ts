@@ -14,7 +14,7 @@ export const useTradeStore = create<TradeState>()(
     (set) => ({
       trades: [],
       upsertTrade: (trade) =>
-        set((state) => ({ trades: [trade, ...state.trades.filter((existingTrade) => existingTrade.id !== trade.id)] })),
+        set((state) => ({ trades: [...state.trades.filter((existingTrade) => existingTrade.id !== trade.id), trade] })),
       deleteTrade: (trade) =>
         set((state) => ({ trades: state.trades.filter((storeTrade) => storeTrade.id !== trade.id) })),
     }),
