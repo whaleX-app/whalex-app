@@ -17,7 +17,7 @@ export const DrawerVersion = () => {
       <View className="flex-row items-center justify-between">
         <View className="flex-row items-center gap-x-1">
           <StyledFontawesome5 name="github" size={14} className="text-gray-50" />
-          <Typography className="text-gray-50 text-sm">v{Constants.manifest?.version}-alpha</Typography>
+          <Typography className="text-gray-50 text-sm">v{Constants.manifest?.version}-stable</Typography>
         </View>
         <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
           <Icon name="settings" size={20} className="text-gray-50" />
