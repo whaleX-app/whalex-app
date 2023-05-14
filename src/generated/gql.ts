@@ -69,6 +69,7 @@ export type OffersResponse = {
 
 export type Query = {
   __typename?: 'Query';
+  latestRelease?: Maybe<RepositoryRelease>;
   offers: OffersResponse;
   trade: Trade;
 };
@@ -86,6 +87,12 @@ export type QueryOffersArgs = {
 
 export type QueryTradeArgs = {
   id: Scalars['String'];
+};
+
+export type RepositoryRelease = {
+  __typename?: 'RepositoryRelease';
+  downloadUrl: Scalars['String'];
+  version: Scalars['String'];
 };
 
 export type Trade = {
@@ -146,6 +153,11 @@ export type DeleteTradeMutationVariables = Exact<{
 
 export type DeleteTradeMutation = { __typename?: 'Mutation', deleteTrade: boolean };
 
+export type LatestReleaseQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type LatestReleaseQuery = { __typename?: 'Query', latestRelease?: { __typename?: 'RepositoryRelease', version: string, downloadUrl: string } | null };
+
 export type OffersQueryVariables = Exact<{
   tickerFrom: Scalars['String'];
   tickerTo: Scalars['String'];
@@ -194,6 +206,14 @@ export const CreateTradeDocument = gql`
 export const DeleteTradeDocument = gql`
     mutation deleteTrade($id: String!) {
   deleteTrade(id: $id)
+}
+    `;
+export const LatestReleaseDocument = gql`
+    query latestRelease {
+  latestRelease {
+    version
+    downloadUrl
+  }
 }
     `;
 export const OffersDocument = gql`
@@ -255,6 +275,9 @@ export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = 
     },
     deleteTrade(variables: DeleteTradeMutationVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<DeleteTradeMutation> {
       return withWrapper((wrappedRequestHeaders) => client.request<DeleteTradeMutation>(DeleteTradeDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'deleteTrade', 'mutation');
+    },
+    latestRelease(variables?: LatestReleaseQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<LatestReleaseQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<LatestReleaseQuery>(LatestReleaseDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'latestRelease', 'query');
     },
     offers(variables: OffersQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<OffersQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<OffersQuery>(OffersDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'offers', 'query');

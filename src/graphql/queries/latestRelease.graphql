@@ -1,0 +1,6 @@
+query latestRelease {
+  latestRelease {
+    version
+    downloadUrl
+  }
+}

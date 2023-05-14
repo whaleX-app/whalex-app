@@ -3,7 +3,6 @@ import { View, TouchableOpacity } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
 import { TradeStatus } from '@generated/gql';
-import { TradeUtils } from '@utils/TradeUtils';
 import { useNavigation } from '@hooks/useNavigation';
 import { useRoute } from '@hooks/useRoute';
 import { useTrade } from '@hooks/useTrade';
