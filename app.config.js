@@ -16,7 +16,7 @@ export default {
       backgroundColor: '#000000',
     },
     android: {
-      package: 'app.whalex.mobile',
+      package: 'app.whalex.android',
       userInterfaceStyle: 'dark',
       adaptiveIcon: {
         foregroundImage: './assets/images/app-icon.png',
