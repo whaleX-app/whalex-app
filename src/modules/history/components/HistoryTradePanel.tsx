@@ -27,7 +27,7 @@ export const HistoryTradePanel = ({ trade, onDelete, ...rest }: Props) => {
   const providerLogo = useProviderLogo(trade.provider, true);
   const coinFromIcon = useCoinIcon(trade.tickerFrom);
   const coinToIcon = useCoinIcon(trade.tickerTo);
-  const resolvedStatus = TradeUtils.resolveStatus(trade);
+  const expiresAt = TradeUtils.resolveExpiresAt(trade.expiresAt);
 
   const renderSwipeActions = () => (
     <TouchableOpacity
@@ -41,18 +41,18 @@ export const HistoryTradePanel = ({ trade, onDelete, ...rest }: Props) => {
   return (
     <Swipeable renderRightActions={renderSwipeActions} overshootRight={false}>
       <TouchableOpacity
-        className="bg-surface-100 rounded-lg flex-row justify-between p-3 mt-3 gap-x-2"
+        className="bg-surface-100 rounded-lg flex-row justify-between p-3 mt-3"
         onPress={() => navigation.navigate('Trade', { id: trade.id })}
         {...rest}
       >
         <View className="justify-between">
-          <StatusCard status={resolvedStatus} />
+          <StatusCard status={trade.status} />
           <View className="flex-row">
             <KycIcon rating={trade.kycRating} />
             <InsuranceIcon rate={trade.insurance} className="ml-1" />
           </View>
         </View>
-        <View className="flex-1 gap-y-2">
+        <View className="flex-1 gap-y-2 ml-2">
           <View className="flex-row items-center gap-x-1">
             <Image source={providerLogo} resizeMode="cover" className="rounded h-6 w-6" />
             <View>
@@ -68,10 +68,10 @@ export const HistoryTradePanel = ({ trade, onDelete, ...rest }: Props) => {
               <Typography className="text-sm text-primary">{dayjs(trade.createdAt).fromNow()}</Typography>
               <Typography className="text-sm text-gray-100">({dayjs(trade.createdAt).format('h:mm:ss A')})</Typography>
             </View>
-            {resolvedStatus !== TradeStatus.Expired && resolvedStatus != TradeStatus.Completed && (
+            {trade.status !== TradeStatus.Expired && trade.status != TradeStatus.Completed && expiresAt && (
               <View className="flex-row items-center gap-x-1 mt-0.5">
                 <Typography className="text-sm text-gray-100">{t('tradeExpires')}</Typography>
-                <Typography className="text-primary text-sm">{dayjs(trade.expiresAt).fromNow()}</Typography>
+                <Typography className="text-primary text-sm">{expiresAt}</Typography>
                 <Typography className="text-sm text-gray-100">
                   ({dayjs(trade.expiresAt).format('h:mm:ss A')})
                 </Typography>

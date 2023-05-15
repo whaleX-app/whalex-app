@@ -39,7 +39,7 @@ describe('useTrade', () => {
 
   it('returns ongoing trade', () => {
     const { result } = renderHook(() => useTrade());
-    expect(result.current.trade).toBe(trades.find((trade) => trade.id === 'id4'));
+    expect(result.current.trade).toBe(trades.find((trade) => trade.id === 'id3'));
   });
 
   it('deletes trade', () => {

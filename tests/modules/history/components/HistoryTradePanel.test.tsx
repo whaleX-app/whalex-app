@@ -1,9 +1,13 @@
 import { TradeStatus } from '@generated/gql';
 import { HistoryTradePanel } from '@modules/history/components/HistoryTradePanel';
 import { fireEvent, render, screen } from '@testing-library/react-native';
+import { TradeUtils } from '@utils/TradeUtils';
 import { createTrade } from '../../../test-utils';
 
 jest.mock('@stores/useTradeStore');
+jest.mock('@utils/TradeUtils');
+
+const TradeUtilsMock = jest.mocked(TradeUtils);
 
 const trades = [
   createTrade({
@@ -24,7 +28,7 @@ const trades = [
 
 describe('HistoryTradePanel', () => {
   it('renders correctly', () => {
-    render(<HistoryTradePanel trade={trades[0]} onDelete={() => {}} />);
+    render(<HistoryTradePanel trade={trades[0]} onDelete={() => {}} lastUpdate={0} />);
 
     expect(screen.getByText('Swapuz')).toBeTruthy();
     expect(screen.getByText('1.53535')).toBeTruthy();
@@ -32,7 +36,9 @@ describe('HistoryTradePanel', () => {
   });
 
   it('renders relative expiration time', () => {
-    render(<HistoryTradePanel trade={trades[1]} onDelete={() => {}} />);
+    TradeUtilsMock.resolveExpiresAt.mockReturnValueOnce('expirationTime');
+
+    render(<HistoryTradePanel trade={trades[1]} onDelete={() => {}} lastUpdate={0} />);
 
     expect(screen.getByText('tradeExpires')).toBeTruthy();
   });
@@ -40,7 +46,7 @@ describe('HistoryTradePanel', () => {
   it('triggers delete event', () => {
     const onDelete = jest.fn();
 
-    render(<HistoryTradePanel trade={trades[1]} onDelete={onDelete} />);
+    render(<HistoryTradePanel trade={trades[1]} onDelete={onDelete} lastUpdate={0} />);
     fireEvent.press(screen.UNSAFE_getByProps({ name: 'delete' }));
 
     expect(onDelete).toHaveBeenCalled();

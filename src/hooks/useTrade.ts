@@ -14,9 +14,7 @@ export const useTrade = (id?: string) => {
     } else {
       // Return most recent ongoing trade.
       const ongoingTrades = trades.filter((trade) => {
-        const resolvedStatus = TradeUtils.resolveStatus(trade);
-
-        return resolvedStatus !== TradeStatus.Completed && resolvedStatus !== TradeStatus.Expired;
+        return trade.status !== TradeStatus.Completed && trade.status !== TradeStatus.Expired;
       });
 
       return ongoingTrades.shift();
