@@ -21,11 +21,6 @@ const socialLinks = [
   { label: 'Twitter', icon: <TwitterIcon width={20} height={20} />, href: 'https://twitter.com/whaleXapp' },
   { label: 'Telegram', icon: <TelegramIcon size={20} />, href: 'https://t.me/whaleXapp' },
   {
-    label: 'Reddit',
-    icon: <Image source={RedditLogo} className="rounded-full w-5 h-5" />,
-    href: 'https://www.reddit.com/r/whaleXapp/',
-  },
-  {
     label: 'SimpleX Chat',
     icon: <Image source={SimplexchatLogo} className="rounded-full w-5 h-5" />,
     href: 'https://simplex.chat/contact#/?v=1-2&smp=smp%3A%2F%2FSkIkI6EPd2D63F4xFKfHk7I1UGZVNn6k1QWZ5rcyr6w%3D%40smp9.simplex.im%2Fes_j6MizYy6geTYKqnJ3-EKoIrLSPsj6%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAnKHaHorpWYGpY2CZF4UYtKT8tBnqNgMv0zwtfHrheHw%253D%26srv%3Djssqzccmrcws6bhmn77vgmhfjmhwlyr3u7puw4erkyoosywgl67slqqd.onion&data=%7B%22type%22%3A%22group%22%2C%22groupLinkId%22%3A%22O3t6cYO7vip7qcC7l-xVKA%3D%3D%22%7D',
