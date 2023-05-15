@@ -35,8 +35,8 @@ export const SettingsScreen = () => {
             <Typography>Privacy policy</Typography>
           </View>
           <Typography className="mt-3 text-gray-100">
-            We do not log or store any of your personal data including your IP, device information (build, OS version
-            etc) or your transaction details (amount, coins and addresses).
+            We do not log or store any of your personal data including IP address, device information (build, OS version
+            etc) or your transaction details (amount, coins, addresses).
           </Typography>
         </View>
       </ScrollView>
